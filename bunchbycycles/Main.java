@@ -18,9 +18,12 @@ public class Main {
     assert(counts.lowCount == 2);
     assert(counts.mediumCount == 3);
     assert(counts.highCount == 1);
-    if(counts>910)
+    for(int i=0;i<counts.length;i++)
+      
+    {
+      if(counts[i]>910)
       highCount++;
-    else  if(counts>=410 || counts<=909)
+    else  if(counts[i]>=410 || counts[i]<=909)
       mediuCount++;
     else 
       lowCount++;
