@@ -18,16 +18,47 @@ public class Main {
     assert(counts.lowCount == 2);
     assert(counts.mediumCount == 3);
     assert(counts.highCount == 1);
-    for(int i=0;i<counts.length;i++)
-      
+   
+
+    ArrayList<Integer> high=new ArrayList<> ();
+     ArrayList<Integer> low=new ArrayList<> ();
+    ArrayList<Integer> medium=new ArrayList<> ();
+ for(int i=0;i<counts.length;i++)
     {
       if(counts[i]>910)
+      {
+        high.add(counts[i]);
       highCount++;
-    else  if(counts[i]>=410 || counts[i]<=909)
-      mediuCount++;
-    else 
-      lowCount++;
-    System.out.println("Done counting :)\n");
+      }
+
+
+      else  if(counts[i]>=410 && counts[i]<=909)
+      {
+         medium.add(counts[i]);
+        mediumCount++;
+      }
+
+      else 
+      {
+         low.add(counts[i]);
+        lowCount++;
+      }
+
+    }
+    for(int arr1:high)
+    {
+       System.out.println("The battery charged more than 910 is:" +arr1+ "and count is" +highCount);
+    }
+     for(int arr2:medium)
+    {
+         System.out.println("The battery charged between  410 and  910 is:" +arr2+ "and count is" +midCount);
+    } 
+    for(int arr3:low)
+    {
+      System.out.println("The battery charged less than 410 is:" +arr3+ "and count is" +lowCount);
+    }
+
+    System.out.println("Done counting");
   }
 
   public static void main(String[] args) {
