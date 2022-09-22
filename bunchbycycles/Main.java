@@ -18,10 +18,17 @@ public class Main {
     assert(counts.lowCount == 2);
     assert(counts.mediumCount == 3);
     assert(counts.highCount == 1);
+    if(counts>910)
+      highCount++;
+    else  if(counts>=410 || counts<=909)
+      mediuCount++;
+    else 
+      lowCount++;
     System.out.println("Done counting :)\n");
   }
 
   public static void main(String[] args) {
     testBucketingByNumberOfCycles();
+    
   }
 }
